@@ -87,10 +87,6 @@ d3.csv("data.csv", function(error, csvdata) {
 
     chart.call(toolTip);
 
-
-
-
-
     // Append an SVG group for the x-axis, then display the x-axis
     chart
     .append("g")
@@ -163,44 +159,4 @@ d3.csv("data.csv", function(error, csvdata) {
         .on("mouseout", function(d, index) {
           toolTip.hide(d);
         });         
-
-    // chart
-    //     .selectAll("circle")
-    //     .data(csvdata)
-    //     .enter()
-    //     .append("circle")
-    //     .attr("cx", function(d, index) {
-    //         return xLinearScale(+d[currentAxisLabelX]);
-    //     })
-    //     .attr("cy", function(d, index) {
-    //         return yLinearScale(d.healthcare);
-    //     })
-    //     .attr("r", "15")
-    //     .style("fill","lightblue") 
-    //     .style("opacity", .9)
-    //     .style("stroke-width", ".2")
-
-    // Append text in circles
-    // chart.selectAll("text")
-    //     .data(csvdata)
-    //     .enter()
-    //     .append("text")
-    //     .attr("x", function(d, index) {
-    //         return xLinearScale(+d[currentAxisLabelX]- 0.08);
-    //     })
-    //     .attr("y", function(d, index) {
-    //         return yLinearScale(d.healthcare - 0.2);
-    //     })
-    //     .text(function(d){
-    //         return d.abbr;
-    //     })
-    //     .attr("class", "circleText")
-    //     // add listeners on text too since it is on top of circle
-    //     .on("mouseover", function(d) {
-    //       toolTip.show(d);
-    //     })
-    //     // onmouseout event
-    //     .on("mouseout", function(d, index) {
-    //       toolTip.hide(d);
-    //     });             
 });
